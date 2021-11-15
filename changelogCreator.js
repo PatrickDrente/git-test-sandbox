@@ -33,7 +33,7 @@ exec("git log --oneline --decorate", (error, stdout, stderr) => {
         }
         if (version != "")
             changelog += "## " + version + ":\n";
-        if (change != "")
+        if ((change != "") && (!change.startsWith("org: version-bump ")))
             changelog += "- " + change + "\n"
     });
     fs.writeFile('CHANGELOG.md', changelog, (error) => {
