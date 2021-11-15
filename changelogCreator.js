@@ -34,7 +34,12 @@ exec("git log --oneline --decorate", (error, stdout, stderr) => {
             change = line
         }
         if (version != "")
-            changelog += "## " + version + ":\n";
+            if (version != "current") {
+                changelog += `## [${version}](${repoHome}releases/tag/${version}):\n`;
+            } else {
+                changelog += `## ${version}:\n`;
+            }
+
         if ((change != "") && (!change.startsWith("org: version-bump ")))
             changelog += `- ${change} ([${hash}](${repoHome}commit/${hash}))\n`
     });
