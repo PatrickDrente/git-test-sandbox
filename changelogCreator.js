@@ -42,7 +42,7 @@ exec("git log --oneline --decorate", (error, stdout, stderr) => {
             const commitMessage = `org: version-bump ${newVersion}`
             exec(`git commit -a -m "${commitMessage}""`, (error, stdout, stderr) => {
                 if (error) throw error;
-                let hash = stdout.split(" ")[1];
+                let hash = stdout.split(" ")[1].slice(0, -1);
                 console.log(hash);
                 console.log(stdout);
             })
