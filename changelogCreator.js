@@ -39,7 +39,12 @@ exec("git log --oneline --decorate", (error, stdout, stderr) => {
     fs.writeFile('CHANGELOG.md', changelog, (error) => {
         if (error) throw error;
         if (newVersion != "current") {
-            console.log("version bump")
+            const commitMessage = `org: version-bump ${version}`
+            exec(`git commit -a -m ${commitMessage}`, (error, stdout, stderr) => {
+                const hash = stdout.split(" ").split(']')[0];
+                console.log(hash);
+                console.log(stdout);
+            })
         } else {
             console.log("old version")
         }
