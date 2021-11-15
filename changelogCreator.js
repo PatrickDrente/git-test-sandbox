@@ -43,8 +43,10 @@ exec("git log --oneline --decorate", (error, stdout, stderr) => {
             exec(`git commit -a -m "${commitMessage}""`, (error, stdout, stderr) => {
                 if (error) throw error;
                 let hash = stdout.split(" ")[1].slice(0, -1);
-                console.log(hash);
-                console.log(stdout);
+                exec(`git tag -a ${newVersion} ${hash} -m "${commitMessage}"`, (error, stdout, stderr) => {
+                    if (error) throw error;
+                    console.log(stdout)
+                })
             })
         } else {
             console.log("old version")
