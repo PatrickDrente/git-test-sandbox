@@ -1,2 +1,2 @@
-version-bump:
+version:
 	node .\changelogCreator.js $(NEW-VERSION)

@@ -57,7 +57,7 @@
         {
             "label": "version",
             "type": "shell",
-            "command": "make version ${input:versionNumber}",
+            "command": "node changelogCreator.js ${input:versionNumber}",
             "group": "build",
             "isBackground": false,
             "presentation": {

@@ -4,6 +4,7 @@ const args = process.argv
 const newVersion = (args.length > 2) ? args[2] : "current";
 const repoHome = "https://github.com/PatrickDrente/git-test-sandbox/"
 
+console.log(newVersion);
 exec("git log --oneline --decorate", (error, stdout, stderr) => {
     let lines = stdout.split("\n");
     let changelog = "# Changelog\n";
