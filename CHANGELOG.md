@@ -1,4 +1,6 @@
 # Changelog
+## current:
+- blafasel ([2a07c24 ](https://github.com/PatrickDrente/git-test-sandbox/commit/2a07c24 ))
 ## [bullshit](https://github.com/PatrickDrente/git-test-sandbox/releases/tag/bullshit):
 - bla ([8afa5b3 ](https://github.com/PatrickDrente/git-test-sandbox/commit/8afa5b3 ))
 ## [5.6.2](https://github.com/PatrickDrente/git-test-sandbox/releases/tag/5.6.2):
