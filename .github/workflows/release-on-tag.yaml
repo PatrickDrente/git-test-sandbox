@@ -14,7 +14,7 @@ jobs:
       # ...
       - name: "Build & test"
         run: |
-          echo "done!"
+          echo "done!>release.txt"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
