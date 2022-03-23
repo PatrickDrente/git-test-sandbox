@@ -24,4 +24,5 @@ jobs:
           files: |
             LICENSE.txt
             *.jar
+            *.txt
             CHANGELOG.md
